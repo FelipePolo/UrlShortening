@@ -1,20 +1,32 @@
 import React from "react";
 import { Provider } from "react-redux";
 import generateStore from "./Redux/store";
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //importing layaut of reactstrap
-import {Container} from 'reactstrap'
+import { Container } from "reactstrap";
 
 //importing components
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
+import Home from './components/Home/Home'
 
 function App() {
   const store = generateStore();
   return (
     <Provider store={store}>
-      <Container className = "p-0">
-        <Navbar></Navbar>
-      </Container>
+      <Router>
+        <Container className="p-0 app">
+          <Navbar></Navbar>
+
+
+
+        </Container>
+          <Switch>
+
+            <Route path ={"/"} exact>
+              <Home></Home>
+            </Route>
+          </Switch>
+      </Router>
     </Provider>
   );
 }

@@ -1,0 +1,101 @@
+@import "./variables.scss";
+@import "./bootstrapsass/functions";
+@import "./bootstrapsass/variables";
+@import "./bootstrapsass/mixins/breakpoints";
+
+.mynavbar{
+  margin-top: 10px;
+  display:  flex;
+  justify-content: space-between;
+  &_brand{
+    img{
+      height: 30px;
+    }
+  }
+  &_toggler{
+    color: var(--GrayishViolet);
+  }
+
+  &_collapse{
+    background-color: var(--DarkViolet);
+    margin-top: 10px;
+    border-radius: 10px;
+    &_nav{
+      display: flex;
+      text-align: center;
+      padding-top: 40px;
+      .item{
+        margin-bottom: 30px;
+        a{
+          font-family: 'Poppins';
+          font-weight: 700;
+          color: #fff;
+        }
+        a:hover{
+          text-decoration: none;
+        }
+        
+      }
+      .item:last-of-type{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-bottom: 40px;
+        width: 90%;
+        height: 50px;
+        background-color: var(--Cyan);
+        border-radius: 30px;
+      }
+      .space{
+        height: 1px;
+        margin: 0px auto;
+        margin-bottom: 20px;
+        width: 90%;
+        background-color: var(--GrayishViolet);
+      }
+    }
+    
+  }
+
+}
+
+//responsive for destock display lg
+@include media-breakpoint-up(lg){
+  .mynavbar{
+    &_collapse{
+      background-color: transparent;
+      display: flex;
+      justify-content: flex-end;
+      &_nav{
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        .item{
+          margin-bottom: 0px;
+          margin-left: 20px;
+          a{
+            font-family: 'Poppins';
+            font-weight: 700;
+            color: #000;
+          }
+          a:hover{
+            text-decoration: none;
+          }
+          
+        }
+        .item:last-of-type{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 20px;
+          width: 120px;
+          height: 40px;
+        }
+        .space{
+          display: none;
+        }
+      } 
+    }
+  }
+}
