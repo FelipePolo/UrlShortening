@@ -19,7 +19,7 @@ function Homefooter() {
       <Homefooterlist title = "Features" li = {["Link Shortening","Branded Links","Analytics"]}  />
       <Homefooterlist title = "Resources" li = {["Blog","Developers","Support"]}  />
       <Homefooterlist title = "Company" li = {["About","Our Team","Careers","Contact"]}  />
-      <Col xs = "12" className = "icon_container">
+      <Col xs = "12" className = "icon_container" lg = {"3"}>
         <a href = "www.facebook.com"><img src={facebook} alt="facebook"/></a>
         <a href = "twitter.com"><img src={twitter} alt="twitter"/></a>
         <a href = "pinterest.com"><img src={pinterest} alt="pinterest"/></a>

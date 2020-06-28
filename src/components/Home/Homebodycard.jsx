@@ -3,7 +3,7 @@ import { Col } from "reactstrap";
 
 function Homebodycard(props) {
   return (
-    <Col className="card" xs={"11"}>
+    <Col className="card" xs={"11"} lg = {"3"}>
       <div className="img_container">
         <div className="circle">
           <img src={props.img} alt="recognition" />

@@ -20,30 +20,30 @@ function NavbarC() {
   const [toggle, settoggle] = useState(false);
   return (
     <Navbar expand={"lg"} className = "mynavbar">
-      <NavbarBrand className = "mynavbar_brand">
+      <div className = "mynavbar_brand mynavbar_brand navbar-brand">
         <Link to = "/"><img src={shortlyLogo} alt="logo" /></Link>
-      </NavbarBrand>
-      <NavbarToggler onClick={() => settoggle(!toggle)} navbar className = "mynavbar_toggler">
-        <i class="fas fa-grip-lines"></i>
+      </div>
+      <NavbarToggler onClick={() => settoggle(!toggle)} navbar = "True" className = "mynavbar_toggler">
+        <i className="fas fa-grip-lines"></i>
       </NavbarToggler>
-      <Collapse isOpen={toggle} navbar className="mynavbar_collapse">
-        <Nav navbar className = "mynavbar_collapse_nav">
-          <NavItem className = "item">
+      <Collapse isOpen={toggle} navbar = "True" className="mynavbar_collapse">
+        <Nav navbar = "True" className = "mynavbar_collapse_nav">
+          <div className = "mynavbar_brand navbar-brand item">
             <Link to={"/Features"} onClick = {() => settoggle(!toggle)}>Features</Link>
-          </NavItem>
-          <NavItem className = "item">
+          </div>
+          <div className = "mynavbar_brand navbar-brand item">
             <Link to={"/Princing"} onClick = {() => settoggle(!toggle)}>Princing</Link>
-          </NavItem>
-          <NavItem className = "item">
+          </div>
+          <div className = "mynavbar_brand navbar-brand item">
             <Link to={"/Resources"} onClick = {() => settoggle(!toggle)}>Resources</Link>
-          </NavItem>
+          </div>
           <div className = "space" />
-          <NavItem className = "item">
+          <div className = "mynavbar_brand navbar-brand item">
             <Link to = {"/login"} onClick = {() => settoggle(!toggle)}>Login</Link>
-          </NavItem>
-          <NavItem className = "item">
+          </div>
+          <div className = "mynavbar_brand navbar-brand item">
             <Link to = {"/SingUp"} onClick = {() => settoggle(!toggle)}>Sing Up</Link>
-          </NavItem>
+          </div>
         </Nav>
       </Collapse>
     </Navbar>
